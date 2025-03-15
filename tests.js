@@ -9,4 +9,12 @@ describe("age calculator", () => {
         //assert
         assert.equal(result, 50);
     });
+    it("someone born 2021 is 1 in 2022", () =>{
+        //arrange
+        //act
+        const result =app.getAge(2021,2022);
+
+        //assert
+        assert.equal(result, 1);
+    });
 });
