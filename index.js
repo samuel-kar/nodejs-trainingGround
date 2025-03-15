@@ -1,5 +1,5 @@
 function getAge(birthYear, currentYear){
-    return (2022-1972);
+    return (currentYear - birthYear);
 }
 
 const age = getAge(1972, 2022);
@@ -13,3 +13,4 @@ console.log("The result is " + result);
 
 const text = "Here is some text to briefly enjoy";
 console.log(text);
+console.log("Hello" + "world");

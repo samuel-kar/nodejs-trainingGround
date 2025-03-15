@@ -17,4 +17,10 @@ describe("age calculator", () => {
         //assert
         assert.equal(result, 1);
     });
+    it("someone born 1980 is 45 in 2025", () =>{
+        const result = app.getAge(1980, 2025);
+
+        assert.equal(result, 45);
+    });
+
 });
