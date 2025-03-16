@@ -69,4 +69,11 @@ describe("age classifier", () => {
         //assert
         assert.equal(result, "old");
     });
+    it("But 50 - that's prime age, man", () =>{
+        //arrange
+        //act
+        const result = getAgeGroup(50);
+        //assert
+        assert.equal(result, "prime");
+    });
 })

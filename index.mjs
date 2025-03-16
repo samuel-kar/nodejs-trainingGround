@@ -17,6 +17,7 @@ export const getAgeGroup = (age) => {
     if (age < 13) return "kid";
     if (age < 20) return "teenager";
     if (age < 40) return "adult";
-    //if none of the above works then return simply old
-    return "old";
+    if ((age > 39 && age <49) || age > 50) return "old";
+    //if none of the above works then return simply prime
+    return "prime";
 };
