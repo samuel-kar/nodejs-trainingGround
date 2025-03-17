@@ -26,6 +26,13 @@ describe("age calculator", () => {
 });
 
 describe("age classifier", () => {
+    it("less than 0 years old returns error", () => {
+        //arrange
+        //act
+        const result = getAgeGroup(-4);
+        //assert
+        assert.equal(result, "error");
+    });
     it("0-3 years old should be a toddler", () => {
         //arrange
         //act

@@ -13,6 +13,7 @@ export const getAgeGroup = (age) => {
         return "adult"; 
     } else return "old";
      */
+    if (age < 0) return "error";
     if (age < 4) return "toddler";
     if (age < 13) return "kid";
     if (age < 20) return "teenager";
