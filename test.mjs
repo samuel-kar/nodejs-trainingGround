@@ -150,13 +150,36 @@ describe("loops does things over and over", () => {
     it.skip("looping through an array with while loop", () => {
         //arrange
         let index = 0;
-        const names =["Samuel", "Tom", "Jonas"];
+        const names =["Samwise", "Frodo", "Merry"];
 
         //act
         while (index < names.length) {
             console.log(`Index is now at: '${index}'`);
             console.log(`Name at index is: '${names[index]}'`);
             index += 1;
+        }
+    });
+    it("loop through an array with a for loop", () => {
+        const names =["Samwise", "Frodo", "Merry"];
+        
+        for (let i=0; i<names.length; i++){
+            console.log(`We're now at index '${i}'`);
+            console.log(`Name at this index: '${names[i]}'`);
+        }
+    });
+    it("calling getAge for each age", () => {
+        //arrange
+        const currentYear = 2025;
+        const birthYear = [1973, 2000, 1632];
+
+        //act
+        for (let i=0; i < birthYear.length; i++) {
+            const age = getAge(birthYear[i], currentYear);
+
+            console.log(
+                `If you were born in ${birthYear[i]}, 
+                then you are ${age} in year ${currentYear}.`
+            );
         }
     });
 });
