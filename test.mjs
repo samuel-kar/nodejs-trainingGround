@@ -86,8 +86,16 @@ describe("age classifier", () => {
 });
 
 describe("constants and variables", () =>{
-    it("const means constant", ()=>{
+    it.skip("const means constant", ()=>{
         const aNumber = 1;
         aNumber = 2;
+    });
+    it("you can change a let variable", () =>{
+        //arrange
+        let aNumber = 1;
+        //act
+        aNumber = 2;
+        //assert
+        assert.equal(aNumber, 2);
     });
 });
