@@ -98,4 +98,17 @@ describe("constants and variables", () =>{
         //assert
         assert.equal(aNumber, 2);
     });
+    it("null should be used for not set", () => {
+        //arrange
+        //declaring a dummy function
+        const peekIntoTheBox = () => {
+            return false;
+        }
+
+        //act
+        let isCatAlive = null;
+        //assert
+        assert.equal(null, isCatAlive);
+        isCatAlive = peekIntoTheBox();
+    });
 });
