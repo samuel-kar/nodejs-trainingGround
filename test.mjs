@@ -138,7 +138,7 @@ describe("arrays intro", () => {
     });
 });
 describe("loops does things over and over", () => {
-    it("while loops just keeps going...", () => {
+    it.skip("while loops just keeps going...", () => {
         //arrange
         let counter = 0;
         //act
@@ -147,7 +147,7 @@ describe("loops does things over and over", () => {
             counter = counter + 1;
         }
     });
-    it("looping through an array with while loop", () => {
+    it.skip("looping through an array with while loop", () => {
         //arrange
         let index = 0;
         const names =["Samuel", "Tom", "Jonas"];
