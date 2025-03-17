@@ -182,4 +182,16 @@ describe("loops does things over and over", () => {
             );
         }
     });
+
+    it("adding elements to array with push", () => {
+        //arrange
+        const names = ["Merry", "Pippin", "Bombadil"];
+        assert.equal(names.length, 3);
+        //act
+        names.push("Gandalf");
+        
+        //assert
+        assert.equal(names.length, 4);
+        assert.equal(names[3], "Gandalf");
+    });
 });
