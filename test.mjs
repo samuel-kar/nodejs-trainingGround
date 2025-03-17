@@ -139,9 +139,12 @@ describe("arrays intro", () => {
 });
 describe("loops does things over and over", () => {
     it("while loops just keeps going...", () => {
+        //arrange
+        let counter = 0;
         //act
-        while(1<2) {
-            console.log("Another lap in the loop");
+        while(counter < 2) {
+            console.log(`Counter is now '${counter}'`);
+            counter = counter + 1;
         }
     });
 });
