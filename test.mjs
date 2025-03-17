@@ -112,7 +112,7 @@ describe("constants and variables", () =>{
         isCatAlive = peekIntoTheBox();
     });
 });
-describe("arrays and loops", () => {
+describe("arrays intro", () => {
     it("array keep values", () => {
         //arrange
         const array1 = [1, 2, 3, 4];
@@ -126,7 +126,7 @@ describe("arrays and loops", () => {
 
         //act
         const firstElement = names[0];
-        const secondElement = names[precourse-javascript-intro];
+        const secondElement = names[1];
 
         const length = names.length;
         const lastElement = names[names.length - 1];
@@ -135,5 +135,13 @@ describe("arrays and loops", () => {
         assert.equal(secondElement, "Julius");
         assert.equal(lastElement, "Augustus");
         assert.equal(length,3);
+    });
+});
+describe("loops does things over and over", () => {
+    it("while loops just keeps going...", () => {
+        //act
+        while(1<2) {
+            console.log("Another lap in the loop");
+        }
     });
 });
