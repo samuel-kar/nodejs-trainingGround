@@ -83,4 +83,11 @@ describe("age classifier", () => {
         //assert
         assert.equal(result, "prime");
     });
-})
+});
+
+describe("constants and variables", () =>{
+    it("const means constant", ()=>{
+        const aNumber = 1;
+        aNumber = 2;
+    });
+});
