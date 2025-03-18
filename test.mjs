@@ -218,4 +218,16 @@ describe("loops does things over and over", () => {
         assert.equal(names[1], "Greyhame");
 
     });
+    it("adding elements to immutable array", () => {
+        //arrange
+        const names = ["Johan", "Petter", "Lisa"];
+        assert.equal(names.length, 3);
+        //act
+        const newNames = [...names, "Stefan"];
+
+        //assert
+        assert.equal(names.length, 3);
+        assert.equal(newNames.length, 4);
+        assert.equal(newNames[3], "Stefan");
+    });
 });
