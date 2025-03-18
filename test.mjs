@@ -258,3 +258,19 @@ describe("loops does things over and over", () => {
         assert.equal(highNumbers.length, 3);
     });
 });
+describe("object are for buiding things", () => {
+    it("our first object - a human", () => {
+        //arrange
+        //act
+        const person = {
+            name: "Marcus",
+            birthYear: 1972,
+            isTeacher: true,
+        };
+
+        //assert
+        assert.equal(person.name, "Marcus");
+        assert.equal(person.birthYear, 1972);
+        assert.equal(person.isTeacher, true);
+    });
+});
