@@ -373,10 +373,27 @@ describe("division", () => {
         const numberTwo = 2;
 
         //act
-        const answer = divideIt(numberOne, numberTwo);
+        const result = divideIt(numberOne, numberTwo);
 
         //assert
-        assert.equal(answer, 2);
+        assert.equal(result, 2);
 
+    });
+    it("dividing 4 by 0 and catching the error", () =>{
+        //arrange
+        const numberOne = 4;
+        const numberTwo = 0;
+
+        try {
+        //act
+        const result = divideIt(numberOne, numberTwo);
+    } catch (error) {
+        //assert
+        assert.notEqual(error, undefined);
+        assert.equal(
+            error.message,
+            "Pls no division by 0"
+        );
+    }
     });
 });
