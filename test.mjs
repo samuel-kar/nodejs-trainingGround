@@ -1,5 +1,5 @@
 import assert from "assert";
-import { getAge, getAgeGroup } from "./index.mjs";
+import { getAge, getAgeGroup, getAgeForPerson } from "./index.mjs";
 
 describe("age calculator", () => {
     it("someone born 1972 is 50 in 2022", () =>{
@@ -272,5 +272,20 @@ describe("object are for buiding things", () => {
         assert.equal(person.name, "Marcus");
         assert.equal(person.birthYear, 1972);
         assert.equal(person.isTeacher, true);
+    });
+    it("get age for a person", () => {
+        //arrange
+        const currentYear = 2025;
+        const person = {
+            name: "Adam",
+            birthYear: 1989,
+            isTeacher: false,
+        };
+        
+        //act
+        const age = getAgeForPerson(person, currentYear);
+
+        //assert
+        assert.equal(age, 36);
     });
 });
