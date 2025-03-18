@@ -303,4 +303,32 @@ describe("object are for buiding things", () => {
         assert.equal(person.favoriteMovies.length, 3);
         assert.equal(person.favoriteMovies[1], "LOTR");
     });
+    it("a person has a list of favorite movies with releaseYears", () => {
+        //arrange
+        //act
+        const person = {
+            name: "Adam",
+            birthYear: 1989,
+            isTeacher: false,
+            favoriteMovies: [
+                {
+                    title: "The Matrix",
+                    releaseYear: 1999,
+                },
+                {
+                    title: "LOTR",
+                    releaseYear: 2001,
+                },
+                {
+                    title: "Harry Potter",
+                    releaseYear: 2001,
+                },
+            ],
+        };
+
+        //assert
+        assert.equal(person.favoriteMovies.length, 3);
+        assert.equal(person.favoriteMovies[0].releaseYear, 1999);
+        assert.equal(person.favoriteMovies[1].title, "LOTR");
+    });
 });
