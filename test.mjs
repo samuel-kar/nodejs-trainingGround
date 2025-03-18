@@ -206,4 +206,16 @@ describe("loops does things over and over", () => {
         assert.equal(names.length, 3);
         assert.equal(names[3], undefined);
     });
+    it("removing element from array with slice", () =>{
+        //arrange
+        const names = ["Mithrandir", "Gandalf", "Saruman", "Greyhame"];
+        assert.equal(names.length, 4);
+
+        //act
+        names.pop(2, 1);
+        //assert
+        assert.equal(names.length, 3);
+        assert.equal(names[3], undefined);
+
+    });
 });
