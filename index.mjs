@@ -1,5 +1,6 @@
 export const getAge = (birthYear, currentYear) => currentYear - birthYear;
 export const getAgeForPerson = (person, currentYear) => (currentYear - person.birthYear);
+export const divideIt = (firstNumber, secondNumber) => (firstNumber / secondNumber);
 
 export const getAgeGroup = (age) => {
     /*

@@ -1,5 +1,5 @@
 import assert from "assert";
-import { getAge, getAgeGroup, getAgeForPerson } from "./index.mjs";
+import { getAge, getAgeGroup, getAgeForPerson, divideIt } from "./index.mjs";
 
 describe("age calculator", () => {
     it("someone born 1972 is 50 in 2022", () =>{
@@ -364,5 +364,19 @@ describe("object are for buiding things", () => {
         //assert
         assert.equal(people.length, 2);
         assert.equal(people[0].favoriteMovies[1].title, "The Matrix");
+    });
+});
+describe("division", () => {
+    it("dividing 4 with 2", () =>{
+        //arrange
+        const numberOne = 4;
+        const numberTwo = 2;
+
+        //act
+        const answer = divideIt(numberOne, numberTwo);
+
+        //assert
+        assert.equal(answer, 2);
+
     });
 });
