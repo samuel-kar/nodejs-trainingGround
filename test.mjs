@@ -331,4 +331,38 @@ describe("object are for buiding things", () => {
         assert.equal(person.favoriteMovies[0].releaseYear, 1999);
         assert.equal(person.favoriteMovies[1].title, "LOTR");
     });
+    it("practicing array within array", () => {
+        //arrange
+        //act
+        const people = [
+            {name: "Stefan",
+                favoriteMovies: [
+                    {
+                        title: "LOTR",
+                        releaseYear: 2001,
+                    },
+                    {
+                        title: "The Matrix",
+                        releaseYear: 1999,
+                    }
+                ]
+            },
+            {name: "Frasse",
+                favoriteMovies: [
+                    {
+                        title: "Harry Potter",
+                        releaseYear: 2001,
+                    },
+                    {
+                        title: "Movie2",
+                        releaseYear: 2005,
+                    }
+                ]
+            }
+        ]
+
+        //assert
+        assert.equal(people.length, 2);
+        assert.equal(people[0].favoriteMovies[1].title, "The Matrix");
+    });
 });
