@@ -281,11 +281,26 @@ describe("object are for buiding things", () => {
             birthYear: 1989,
             isTeacher: false,
         };
-        
+
         //act
         const age = getAgeForPerson(person, currentYear);
 
         //assert
         assert.equal(age, 36);
+    });
+    it("a person has a list of favorite movies", () => {
+        //arrange
+        
+        //act
+        const person = {
+            name: "Adam",
+            birthYear: 1989,
+            isTeacher: false,
+            favoriteMovies: ["The Matrix", "LOTR", "Harry Potter"],
+        };
+
+        //assert
+        assert.equal(person.favoriteMovies.length, 3);
+        assert.equal(person.favoriteMovies[1], "LOTR");
     });
 });
