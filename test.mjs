@@ -212,7 +212,7 @@ describe("loops does things over and over", () => {
         assert.equal(names.length, 4);
 
         //act
-        names.splice(1, 2);
+        names.splice(0, 2);
         //assert
         assert.equal(names.length, 2);
         assert.equal(names[1], "Greyhame");
