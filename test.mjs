@@ -1,5 +1,5 @@
 import assert from "assert";
-import { getAge, getAgeGroup, getAgeForPerson, divideIt } from "./index.mjs";
+import { getAge, getAgeGroup, getAgeForPerson, divideIt, addWithLog } from "./index.mjs";
 
 describe("age calculator", () => {
     it("someone born 1972 is 50 in 2022", () =>{
@@ -397,6 +397,30 @@ describe("division", () => {
     }
     });
     it("throwing an error in a test will...", () => {
-        throw new Error("Reports s failing test");
+        throw new Error("Reports as failing test");
+    });
+});
+describe("callbacks", () => {
+    it("adding with logger", () => {
+        //arrange
+        const logThis2 = (message => {
+            console.log(message);
+        });
+
+        //act
+        const result = addWithLog(1, 89, logThis2);
+
+        //assert
+        assert.equal(result, 90);
+
+    });
+    it("adding with inline logger", () => {
+        //act
+        const result = addWithLog(1, 89, (message) =>{
+            console.log(message);
+        });
+
+        //assert
+        assert.equal(result, 90);
     });
 });

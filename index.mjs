@@ -32,21 +32,7 @@ export const getAgeGroup = (age) => {
     return "prime";
 };
 
-function LogThis(message) {
-    console.log(message);
-}
-LogThis("Logging this message");
-
-const logThis2 = function (message) {
-    console.log(message);
+export const addWithLog = (number1, number2, logger) => {
+    logger(`About to '${number1} + ${number2}'`);
+    return number1 + number2;
 };
-
-logThis2("Logging this message too");
-
-
-const logThis3 = (message) => {
-    console.log(message);
-};
-
-console.log(logThis3);
-console.log(logThis3.toString());
