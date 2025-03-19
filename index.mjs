@@ -31,3 +31,22 @@ export const getAgeGroup = (age) => {
     //if none of the above works then return simply prime
     return "prime";
 };
+
+function LogThis(message) {
+    console.log(message);
+}
+LogThis("Logging this message");
+
+const logThis2 = function (message) {
+    console.log(message);
+};
+
+logThis2("Logging this message too");
+
+
+const logThis3 = (message) => {
+    console.log(message);
+};
+
+console.log(logThis3);
+console.log(logThis3.toString());

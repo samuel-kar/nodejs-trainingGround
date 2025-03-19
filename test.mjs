@@ -396,4 +396,7 @@ describe("division", () => {
         );
     }
     });
+    it("throwing an error in a test will...", () => {
+        throw new Error("Reports s failing test");
+    });
 });
